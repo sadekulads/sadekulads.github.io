@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css?v=2" />
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <li role="none"><a href="index.html#industries" role="menuitem">Who I Serve</a></li>
           <li role="none"><a href="portfolio.html" role="menuitem" class="active" style="color: var(--text-primary);">Portfolio</a></li>
           <li role="none"><a href="index.html#process"    role="menuitem">Process</a></li>
-          <li role="none"><a href="index.html#contact"    role="menuitem" class="btn btn-primary nav-cta" style="padding:10px 24px;font-size:0.85rem;">Let's Talk</a></li>
+          <li role="none"><a href="#" onclick="openCalendly(event)" role="menuitem" class="btn btn-primary nav-cta" style="padding:10px 24px;font-size:0.85rem;">Let's Talk</a></li>
         </ul>
         <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -186,7 +188,7 @@
           </p>
 
           <div class="contact-links">
-            <a href="https://calendly.com/sadekulads/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-bottom: 24px; display: inline-flex;">
+            <a href="#" onclick="openCalendly(event)" class="btn btn-primary" style="margin-bottom: 24px; display: inline-flex;">
               📅 Book a Free 30-Min Strategy Call
             </a>
             <a href="mailto:sadekulads@gmail.com" class="contact-link-item" id="contact-email">

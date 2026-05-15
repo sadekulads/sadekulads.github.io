@@ -227,3 +227,16 @@ window.moveCarousel = function(id, direction) {
     console.error('Carousel error', e);
   }
 };
+
+// ── Calendly Popup Widget ─────────────────────
+window.openCalendly = function(e) {
+  if (e) e.preventDefault();
+  if (typeof Calendly !== 'undefined') {
+    Calendly.initPopupWidget({
+      url: 'https://calendly.com/sadekulads/30min?hide_gdpr_banner=1&background_color=0a1128&text_color=f0f4ff&primary_color=4f8ef7'
+    });
+  } else {
+    window.open('https://calendly.com/sadekulads/30min', '_blank');
+  }
+  return false;
+};
