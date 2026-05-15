@@ -413,7 +413,8 @@
         <div class="glass-card fade-up" style="padding:40px;animation-delay:0.15s">
           <h3 style="font-family:var(--font-heading);font-size:1.3rem;font-weight:700;margin-bottom:8px;">Send a Message</h3>
           <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:28px;">I typically respond within 24 hours.</p>
-          <form class="contact-form" id="contact-form" novalidate>
+          <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="215c0db7-2505-478c-90ad-bfe35206e21a">
             <div class="form-row">
               <div class="form-group">
                 <label for="contact-name">Your Name</label>
