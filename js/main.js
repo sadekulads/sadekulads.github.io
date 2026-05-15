@@ -137,18 +137,39 @@ if (statsSection) statsObserver.observe(statsSection);
 // ── Contact Form ──────────────────────────────
 const form = document.getElementById('contact-form');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent ✓';
-    btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
     btn.disabled = true;
+
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      
+      if (response.ok) {
+        btn.textContent = 'Message Sent ✓';
+        btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+        form.reset();
+      } else {
+        btn.textContent = 'Error. Try Again.';
+        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+      }
+    } catch (error) {
+      btn.textContent = 'Error. Try Again.';
+      btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+    }
+
     setTimeout(() => {
-      btn.textContent = 'Send Message';
+      btn.textContent = originalText;
       btn.style.background = '';
       btn.disabled = false;
-      form.reset();
-    }, 3000);
+    }, 4000);
   });
 }
 
