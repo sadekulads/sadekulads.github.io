@@ -54,8 +54,13 @@
 
         <!-- Case Study 1 -->
         <article class="portfolio-card fade-up">
-          <div class="portfolio-image">
-            <img src="assets/portfolio-1.png" alt="Pest Control Campaign Results" onerror="this.src='https://placehold.co/800x600/0a1128/4f8ef7?text=Pest+Control'" />
+          <div class="portfolio-carousel" id="carousel-1" data-images='["assets/portfolio-1.png", "https://placehold.co/1200x800/0a1128/4f8ef7?text=Dashboard+Screenshot+1", "https://placehold.co/1200x800/0a1128/4f8ef7?text=Ad+Performance+Report"]' data-index="0">
+            <img src="assets/portfolio-1.png" alt="Pest Control Campaign Results" id="carousel-img-1" onerror="this.src='https://placehold.co/800x600/0a1128/4f8ef7?text=Pest+Control'" />
+            <button class="carousel-btn prev" onclick="moveCarousel('1', -1)">&#10094;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('1', 1)">&#10095;</button>
+            <div class="carousel-indicators" id="carousel-ind-1">
+               <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
           </div>
           <div class="portfolio-content">
             <div class="portfolio-category">Local Service - Pest Control</div>
@@ -83,8 +88,13 @@
 
         <!-- Case Study 2 -->
         <article class="portfolio-card fade-up" style="animation-delay: 0.1s;">
-          <div class="portfolio-image">
-            <img src="assets/portfolio-2.png" alt="Cleaning Service Results" onerror="this.src='https://placehold.co/800x600/0a1128/a855f7?text=Cleaning+Service'" />
+          <div class="portfolio-carousel" id="carousel-2" data-images='["assets/portfolio-2.png", "https://placehold.co/1200x800/0a1128/a855f7?text=Conversions+Breakdown", "https://placehold.co/1200x800/0a1128/a855f7?text=Cost+Per+Lead+Trend"]' data-index="0">
+            <img src="assets/portfolio-2.png" alt="Cleaning Service Results" id="carousel-img-2" onerror="this.src='https://placehold.co/800x600/0a1128/a855f7?text=Cleaning+Service'" />
+            <button class="carousel-btn prev" onclick="moveCarousel('2', -1)">&#10094;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('2', 1)">&#10095;</button>
+            <div class="carousel-indicators" id="carousel-ind-2">
+               <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
           </div>
           <div class="portfolio-content">
             <div class="portfolio-category">Local Service - Cleaning</div>
@@ -116,8 +126,13 @@
 
         <!-- Case Study 3 -->
         <article class="portfolio-card fade-up" style="animation-delay: 0.2s;">
-          <div class="portfolio-image">
-            <img src="assets/portfolio-3.png" alt="LSA Cleaning Leads" onerror="this.src='https://placehold.co/800x600/0a1128/f0b429?text=LSA+Leads'" />
+          <div class="portfolio-carousel" id="carousel-3" data-images='["assets/portfolio-3.png", "https://placehold.co/1200x800/0a1128/f0b429?text=LSA+Dashboard", "https://placehold.co/1200x800/0a1128/f0b429?text=Leads+Report"]' data-index="0">
+            <img src="assets/portfolio-3.png" alt="LSA Cleaning Leads" id="carousel-img-3" onerror="this.src='https://placehold.co/800x600/0a1128/f0b429?text=LSA+Leads'" />
+            <button class="carousel-btn prev" onclick="moveCarousel('3', -1)">&#10094;</button>
+            <button class="carousel-btn next" onclick="moveCarousel('3', 1)">&#10095;</button>
+            <div class="carousel-indicators" id="carousel-ind-3">
+               <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
           </div>
           <div class="portfolio-content">
             <div class="portfolio-category">Local Service - Cleaning</div>

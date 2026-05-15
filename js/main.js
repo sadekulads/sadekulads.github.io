@@ -191,3 +191,39 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 
 sections.forEach(s => sectionObserver.observe(s));
+
+// ── Inline Portfolio Carousel ─────────────────
+window.moveCarousel = function(id, direction) {
+  const carousel = document.getElementById('carousel-' + id);
+  if (!carousel) return;
+  const img = document.getElementById('carousel-img-' + id);
+  const indContainer = document.getElementById('carousel-ind-' + id);
+  let indicators = [];
+  if (indContainer) indicators = indContainer.children;
+  
+  try {
+    const images = JSON.parse(carousel.getAttribute('data-images'));
+    let index = parseInt(carousel.getAttribute('data-index'));
+    
+    index += direction;
+    if (index >= images.length) index = 0;
+    if (index < 0) index = images.length - 1;
+    
+    carousel.setAttribute('data-index', index);
+    img.style.opacity = '0';
+    
+    setTimeout(() => {
+      img.src = images[index];
+      img.style.opacity = '1';
+      
+      for (let i = 0; i < indicators.length; i++) {
+        indicators[i].classList.remove('active');
+      }
+      if (indicators[index]) {
+        indicators[index].classList.add('active');
+      }
+    }, 200);
+  } catch (e) {
+    console.error('Carousel error', e);
+  }
+};
