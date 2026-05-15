@@ -191,7 +191,7 @@ body {
   background: var(--bg-secondary);
   display: flex; align-items: center; justify-content: center;
 }
-.hero-photo-inner img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.hero-photo-inner img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .hero-photo-initials {
   font-family: var(--font-heading); font-size: 4rem; font-weight: 700;
   background: var(--gradient-blue); -webkit-background-clip: text;
@@ -230,7 +230,7 @@ body {
   box-shadow: var(--shadow-glow-blue);
   aspect-ratio: 4/5; max-width: 380px; margin: 0 auto;
 }
-.about-image-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.about-image-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .about-tools {
   margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px;
 }
